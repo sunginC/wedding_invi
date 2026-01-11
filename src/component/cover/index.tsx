@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { PLACEHOLDER_IMAGE } from "../../images"
 import { COVER_IMAGE } from "../../images"
 import { LazyDiv } from "../lazyDiv"
