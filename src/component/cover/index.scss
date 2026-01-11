@@ -40,7 +40,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-     transition: opacity 1s ease, filter 1s ease;
+     transition: opacity 3s ease, filter 3s ease;
   }
 
   .skeleton {
@@ -53,7 +53,7 @@
       #e0e0e0 100%
     );
     background-size: 200% 100%;
-    animation: skeleton-loading 1.2s infinite;
+    animation: skeleton-loading 4s forwards;
     z-index: 3;
   }
 
@@ -70,7 +70,7 @@
     filter: blur(10px);
     opacity: 1;
     z-index: 2;
-    transition: opacity 0.5s ease;
+    transition: opacity 2.5s ease;
 
     &.fade-out {
       opacity: 0;
