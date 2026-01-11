@@ -11,13 +11,15 @@ export const Cover = () => {
     <LazyDiv className="cover">
       <div className="image-wrapper">
 
+        {!loaded && <div className="skeleton" />}
+
         <img className={`placeholder ${loaded ? "fade-out" : ""}`}
           src={PLACEHOLDER_IMAGE}
-          alt="placeholder"
+          alt="blur placeholder"
         />
          <img className={`real-image ${loaded ? "show" : ""}`}
           src={COVER_IMAGE}
-          alt="sample"
+          alt="cover"
           onLoad={() => setLoaded(true)}
         />
 
