@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "private": true,
-  "homepage": "https://sunginc.github.io/wedding_invitation",
+  "homepage": "https://sunginc.github.io/wedding_invi",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
