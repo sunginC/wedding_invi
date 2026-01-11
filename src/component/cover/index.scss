@@ -34,6 +34,7 @@
   width: 100%;
   overflow: hidden;
   aspect-ratio: 2 / 3;
+
   img {
     position: absolute;
     top: 0;
@@ -67,7 +68,9 @@
   }
 
   .placeholder {
-    filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 1;
     z-index: 2;
     transition: opacity 2.5s ease;
@@ -78,9 +81,13 @@
   }
 
   .real-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
     filter: blur(10px);
     z-index: 1;
+     transition: opacity 1.2s ease, filter 1.2s ease;
 
     &.show {
        opacity: 1;
