@@ -1,4 +1,4 @@
-import coverImage from "./CBY-5759.jpg"
+import coverImage from "./cover.webp"
 import placeHolderImage from "./placeHolder.png"
 import image1 from "./image1.png"
 import image2 from "./image2.png"
