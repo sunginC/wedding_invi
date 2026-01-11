@@ -30,36 +30,44 @@
 }
 
 .image-wrapper {
-    position: relative;
     width: 100%;
     height: auto;
     overflow: hidden;
     display: flex;
     align-items: center;
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: auto;
-       transition: opacity 0.7s ease;
-    }
-    .placeholder {
-      opacity: 1;
-      z-index: 1;
-
-      &.fade-out {
-        opacity: 0;
-      }
-    }
-
-    .real-image {
-      opacity: 0;
-      z-index: 2;
-
-      &.show {
-        opacity: 1;
-      }
     }
   }
   
+  .image-wrapper {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.7s ease;
+  }
+
+  .placeholder {
+    opacity: 1;
+    z-index: 1;
+
+    &.fade-out {
+      opacity: 0;
+    }
+  }
+
+  .real-image {
+    opacity: 0;
+    z-index: 2;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+}
