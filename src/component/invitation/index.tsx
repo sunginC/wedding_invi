@@ -30,7 +30,7 @@ export const Invitation = () => {
       <div className="content">우리 사랑은 늘 봄처럼 따뜻하고</div>
       <div className="content">간혹,</div>
       <div className="content">여름처럼 뜨거울겁니다.</div>
-      <div className="content right">이수동 &lt;사랑가&gt;<</div>
+      <div className="content right">이수동 &lt;사랑가&gt;</div>
       <div className="break" />
       <div className="content">예쁜 빛이 내려앉는 봄날의 결혼식에</div>
       <div className="content">마음을 깃들여 초대합니다.</div>
