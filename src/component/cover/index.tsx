@@ -6,7 +6,15 @@ import { LazyDiv } from "../lazyDiv"
 
 export const Cover = () => {
    const [loaded, setLoaded] = useState(false)
+   const [showReal, setShowReal] = useState(false)
 
+    const handleLoad = () => {
+    setLoaded(true)
+
+    setTimeout(() => {
+          setShowReal(true)
+        }, 800)
+        
   return (
     <LazyDiv className="cover">
       <div className="image-wrapper">
