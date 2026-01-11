@@ -28,7 +28,19 @@
         }
 
 }
- 
+
+.image-wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
   .image-wrapper {
   position: relative;
 
