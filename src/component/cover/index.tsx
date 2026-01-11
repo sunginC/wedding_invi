@@ -13,8 +13,8 @@ export const Cover = () => {
 
     setTimeout(() => {
           setShowReal(true)
-        }, 800)
-        
+        }, 1200)
+    }    
   return (
     <LazyDiv className="cover">
       <div className="image-wrapper">
