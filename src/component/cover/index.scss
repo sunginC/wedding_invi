@@ -33,35 +33,28 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  aspect-ratio: 3 / 4;
   img {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     transition: opacity 0.7s ease;
   }
 
   .placeholder {
-     position: absolute; 
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: auto;
-     opacity: 1;
-     transition: opacity 0.7s ease;
-     z-index: 2;
-    
-     &.fade-out {
+     pacity: 1;
+    z-index: 2;
+
+    &.fade-out {
       opacity: 0;
     }
   }
 
   .real-image {
-   width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 0.7s ease;
-    position: relative;
+   opacity: 0;
+    z-index: 1;
 
     &.show {
       opacity: 1;
