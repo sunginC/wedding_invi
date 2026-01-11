@@ -1,19 +1,25 @@
-import {
-  BRIDE_FULLNAME,
-  GROOM_FULLNAME,
-  LOCATION,
-  WEDDING_DATE,
-  WEDDING_DATE_FORMAT,
-} from "../../const"
+import { PLACEHOLDER_IMAGE } from "../../images"
 import { COVER_IMAGE } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 
 
 export const Cover = () => {
+   const [loaded, setLoaded] = useState(false)
+
   return (
     <LazyDiv className="cover">
       <div className="image-wrapper">
-        <img src={COVER_IMAGE} alt="sample" />
+
+        <img className={`placeholder ${loaded ? "fade-out" : ""}`}
+          src={PLACEHOLDER_IMAGE}
+          alt="placeholder"
+        />
+         <img className={`real-image ${loaded ? "show" : ""}`}
+          src={COVER_IMAGE}
+          alt="sample"
+          onLoad={() => setLoaded(true)}
+        />
+
       </div>
     </LazyDiv>
   )

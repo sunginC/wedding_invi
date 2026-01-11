@@ -1,4 +1,5 @@
 import coverImage from "./CBY-5759.jpg"
+import placeHolderImage from "./placeHolder.png"
 import image1 from "./image1.png"
 import image2 from "./image2.png"
 import image3 from "./image3.png"
@@ -13,6 +14,7 @@ import image11 from "./image11.png"
 import image12 from "./image12.png"
 
 export const COVER_IMAGE = coverImage
+export const PLACEHOLDER_IMAGE = placeHolderImage
 
 export const GALLERY_IMAGES = [
   image1,
