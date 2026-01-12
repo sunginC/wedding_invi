@@ -342,19 +342,22 @@ export const Gallery = () => {
             </div>
           </div>
         </div>
+
+        /*
         <div className="carousel-indicator">
           {CAROUSEL_ITEMS.map((_, idx) => (
             <button
-              key={idx}
-              className={`indicator${idx === slide ? " active" : ""}`}
-              onClick={() =>
-                onIndicatorClick(statusRef.current, slideRef.current, idx)
-              }
+            key={idx}
+            className={`indicator${idx === slide ? " active" : ""}`}
+            onClick={() =>
+              onIndicatorClick(statusRef.current, slideRef.current, idx)
+            }
             />
           ))}
         </div>
-      </div>
+        */
 
+      </div>
       <div className="break" />
 
       <Button
