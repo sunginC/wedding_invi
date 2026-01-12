@@ -343,7 +343,7 @@ export const Gallery = () => {
           </div>
         </div>
 
-        /*
+         {/*  indicator 주석 처리
         <div className="carousel-indicator">
           {CAROUSEL_ITEMS.map((_, idx) => (
             <button
@@ -355,7 +355,7 @@ export const Gallery = () => {
             />
           ))}
         </div>
-        */
+        */}
 
       </div>
       <div className="break" />
