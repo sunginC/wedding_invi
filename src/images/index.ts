@@ -1,5 +1,5 @@
-import coverImage from "./cover.webp"
-import placeHolderImage from "./placeholder.webp"
+import coverImage from "./main_cover_2.webp"
+import placeHolderImage from "./main_cover_1.webp"
 import image1 from "./CBY-5800.webp"
 import image2 from "./CBY-5817.webp"
 import image3 from "./CBY-5840.webp"
@@ -17,12 +17,14 @@ import image14 from "./CBY-6548.webp"
 import image15 from "./CBY-6766.webp"
 import image16 from "./CBY-6765.webp"
 import image17 from "./CBY-6764.webp"
+import image18 from "./CBY-5801.webp"
 
 export const COVER_IMAGE = coverImage
 export const PLACEHOLDER_IMAGE = placeHolderImage
 
 export const GALLERY_IMAGES = [
   image1,
+  image18,
   image2,
   image3,
   image4,
@@ -38,14 +40,5 @@ export const GALLERY_IMAGES = [
   image14,
   image15,
   image16,
-  image17,
-  image17,
-  image17,
-  image17,
-  image17,
-  image17,
-  image17,
-  image17,
-  image17,
   image17,
 ]
