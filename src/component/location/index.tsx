@@ -21,7 +21,6 @@ export const Location = () => {
             <CarIcon className="transportation-icon" />
           </div>
           <div className="heading">자가용</div>
-          <div />
           <div className="content">
             네이버 지도, 카카오 네비, 티맵 등 이용
             <br />
@@ -30,10 +29,9 @@ export const Location = () => {
             - 전용 주차장을 이용하시면 편리합니다.
           </div>
         </div>
-          <div />
           <div className="info-card">
             <div className="label">식사 안내</div>
-            <div className="content">
+            <div className="info-content">
               식사시간: 11시 30분 ~ 14시 00분
               <br />
               장소: 옆건물 1층 드레스 레스토랑
