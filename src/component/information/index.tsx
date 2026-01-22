@@ -12,7 +12,7 @@ export const Information1 = () => {
       <div className="info-card">
         <div className="label">식사 안내</div>
         <div className="content">
-          식사시간: 10시 30분 ~ 13시 00분
+          식사시간: 11시 30분 ~ 14시 00분
           <br />
           장소: 옆건물 1층 드레스 레스토랑
         </div>
@@ -164,7 +164,9 @@ export const Information = () => {
 
   return (
     <LazyDiv className="card information">
+      {/* 식사안내 주석처리
       <Information1 />
+      */}
       <Information2 />
       <AttendanceInfo />
     </LazyDiv>
