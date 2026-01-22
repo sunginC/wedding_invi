@@ -29,6 +29,7 @@ export const Location = () => {
              <br />
             - 전용 주차장을 이용하시면 편리합니다.
           </div>
+        </div>
           <div />
           <div className="info-card">
             <div className="label">식사 안내</div>
@@ -38,7 +39,6 @@ export const Location = () => {
               장소: 옆건물 1층 드레스 레스토랑
             </div>
           </div>
-        </div>
       </LazyDiv>
     </>
   )
