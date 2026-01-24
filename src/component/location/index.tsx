@@ -53,8 +53,13 @@ export const Location = () => {
         <button className="map-btn" onClick={() => {  switch (checkDevice()) {
               case "ios":
               case "android":
-              window.open(
-                 `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,"_self",)
+              if (kakao)
+                  kakao.Navi.start({
+                    name: LOCATION,
+                    x: WEDDING_HALL_POSITION[0],
+                    y: WEDDING_HALL_POSITION[1],
+                    coordType: "wgs84",
+                  })
                 break
               default:
                 window.open(
@@ -66,13 +71,13 @@ export const Location = () => {
           }}
         >
           <img src={knaviIcon} alt="kakao-navi-icon" />
-          <span>카카오 내비</span>
+          <span>카카오 맵</span>
         </button>
 
         <button className="map-btn" onClick={() => {  switch (checkDevice()) {
               case "ios":
               case "android": {
-                window.open(`tmap://route?goalname=식장&goalx=127.291194&goaly=36.347359`, "_self")
+                window.open(`tmap://route?goalname=시시크릿가든웨딩&goalx=127.291194&goaly=36.347359`, "_self")
                 break
               }
               default: {
