@@ -53,12 +53,10 @@ export const Location = () => {
         <button className="map-btn" onClick={() => {  switch (checkDevice()) {
               case "ios":
               case "android":
-               kakao.Navi.start({
-                    name: LOCATION,
-                    x: WEDDING_HALL_POSITION[0],
-                    y: WEDDING_HALL_POSITION[1],
-                    coordType: "wgs84",
-                  })
+              window.open(
+                 `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,
+                  "_self",
+                )
                 break
                 break
               default:
