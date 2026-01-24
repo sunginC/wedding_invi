@@ -47,23 +47,11 @@ export const Location = () => {
   useEffect(() => {
     if (mapType !== "kakao") return
     if (!mapContainer.current) return
-    if (mapInstance.current) {
-    // 이미 초기화된 지도면 재생성하지 않음
-    return
-    }
 
     // SDK가 없으면 동적 로드
     if (!window.kakao || !window.kakao.maps) {
       if (!scriptLoaded.current) {
-        const script = document.createElement("script")
-        script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=8716403b82dbcdb30a93de4569477bd2&autoload=false`
-        script.async = true
-        script.onload = () => {
-          scriptLoaded.current = true
-          window.kakao.maps.load(initKakaoMap)
-        }
-        script.onerror = () => console.error("Kakao SDK 로드 실패")
-        document.head.appendChild(script)
+        console.log("script not loaded")
       } else {
         window.kakao.maps.load(initKakaoMap)
       }
