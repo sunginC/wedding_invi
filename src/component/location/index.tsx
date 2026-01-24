@@ -3,10 +3,11 @@ import BusIcon from "../../icons/bus-icon.svg?react"
 import nmapIcon from "../../icons/nmap-icon.png"
 import knaviIcon from "../../icons/knavi-icon.png"
 import tmapIcon from "../../icons/tmap-icon.png"
-import { useKakao } from "../store"
 import { LazyDiv } from "../lazyDiv"
 import { MAP } from "../../images"
 import { LOCATION, LOCATION_ADDRESS, NMAP_PLACE_ID, KMAP_PLACE_ID,WEDDING_HALL_POSITION} from "../../const"
+import { useEffect, useState } from "react"
+import { KakaoNaviButton } from "./KakaoNaviButton"
 
  const checkDevice = () => {
     const userAgent = window.navigator.userAgent
@@ -20,7 +21,6 @@ import { LOCATION, LOCATION_ADDRESS, NMAP_PLACE_ID, KMAP_PLACE_ID,WEDDING_HALL_P
   }
 
 export const Location = () => {
-   const kakao = useKakao()
   return (
     <>
       <LazyDiv className="card location">
@@ -50,34 +50,16 @@ export const Location = () => {
           <span>네이버 지도</span>
         </button>
 
-        <button className="map-btn" onClick={() => {  switch (checkDevice()) {
-              case "ios":
-              case "android":
-              if (kakao)
-                  kakao.Navi.start({
-                    name: LOCATION,
-                    x: WEDDING_HALL_POSITION[0],
-                    y: WEDDING_HALL_POSITION[1],
-                    coordType: "wgs84",
-                  })
-                break
-              default:
-                window.open(
-                 `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,
-                  "_blank",
-                )
-                break
-            }
-          }}
-        >
-          <img src={knaviIcon} alt="kakao-navi-icon" />
-          <span>카카오 맵</span>
-        </button>
+         <KakaoNaviButton
+            name="식장"
+            x={127.291194}
+            y={36.347359}
+          />
 
         <button className="map-btn" onClick={() => {  switch (checkDevice()) {
               case "ios":
               case "android": {
-                window.open(`tmap://route?goalname=시시크릿가든웨딩&goalx=127.291194&goaly=36.347359`, "_self")
+                window.open(`tmap://route?goalname=시크릿가든웨딩&goalx=127.291194&goaly=36.347359`, "_self")
                 break
               }
               default: {
