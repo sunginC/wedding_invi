@@ -9,8 +9,8 @@ declare global {
 
 interface Props {
   name: string
-  x: 127.291194 // 경도
-  y: 36.347359 // 위도
+  x: number  // 경도
+  y: number  // 위도
 }
 
 export const KakaoNaviButton = ({ name, x, y }: Props) => {
@@ -18,7 +18,7 @@ export const KakaoNaviButton = ({ name, x, y }: Props) => {
     if (!window.Kakao) return
 
     if (!window.Kakao.isInitialized()) {
-      window.Kakao.init(import.meta.env.VITE_KAKAO_KEY)
+      window.Kakao.init(import.meta.env.VITE_KAKAO_SDK_JS_KEY)
     }
   }, [])
 
