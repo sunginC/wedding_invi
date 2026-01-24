@@ -9,7 +9,7 @@ dayjs.locale("ko")
 
 export { dayjs }
 
-export const WEDDING_DATE = dayjs.tz("2026-05-17 11:00", "Asia/Seoul")
+export const WEDDING_DATE = dayjs.tz("2026-05-17 12:00", "Asia/Seoul")
 export const WEDDING_DATE_FORMAT = `YYYY년 MMMM D일 dddd A h시${WEDDING_DATE.minute() === 0 ? "" : " m분"}`
 
 // 예식 당월 휴무일. 켈린더에 표시하기 위함.
@@ -48,6 +48,7 @@ export const BRIDE_INFO = [
     name: BRIDE_FULLNAME,
     phone: "010-7214-9778",
     account: "국민은행 78810201083131",
+    kakaopay: "",
   },
   {
     relation: "신부 아버지",
@@ -74,6 +75,7 @@ export const GROOM_INFO = [
     name: GROOM_FULLNAME,
     phone: "010-9525-1506",
     account: "신한은행 110322885648",
+    kakaopay: "https://qr.kakaopay.com/Ej8VPpkcx",
   },
   {
     relation: "신랑 아버지",
