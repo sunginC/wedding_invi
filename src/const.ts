@@ -84,11 +84,13 @@ export const GROOM_INFO = [
     name: GROOM_FATHER,
     phone: "010-6237-8784",
     account: "농협은행 13412060326",
+     kakaopay: "https://qr.kakaopay.com/FZb5EQT8F",
   },
   {
     relation: "신랑 어머니",
     name: GROOM_MOTHER,
     phone: "010-7227-8789",
     account: "농협은행 83002092551",
+     kakaopay: "https://qr.kakaopay.com/Ej83Al4wx",
   },
 ]
