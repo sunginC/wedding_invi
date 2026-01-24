@@ -54,14 +54,14 @@ export const BRIDE_INFO = [
     relation: "신부 아버지",
     name: BRIDE_FATHER,
     phone: "010-7933-9778",
-    account: "농협은행 0166209778008",
+    account: "농협은행 3521952892833",
     kakaopay: "https://qr.kakaopay.com/Fa8yerBBs",
   },
   {
     relation: "신부 어머니",
     name: BRIDE_MOTHER,
     phone: "010-2977-9778",
-    account: "농협은행 3521952892833",
+    account: "농협은행 0166209778008",
     kakaopay: "https://qr.kakaopay.com/FYCVaqUOM",
   },
 ]
