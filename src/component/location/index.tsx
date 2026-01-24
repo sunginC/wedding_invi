@@ -54,10 +54,7 @@ export const Location = () => {
               case "ios":
               case "android":
               window.open(
-                 `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,
-                  "_self",
-                )
-                break
+                 `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,"_self",)
                 break
               default:
                 window.open(
@@ -75,12 +72,7 @@ export const Location = () => {
         <button className="map-btn" onClick={() => {  switch (checkDevice()) {
               case "ios":
               case "android": {
-                const params = new URLSearchParams({
-                  goalx: WEDDING_HALL_POSITION[0].toString(),
-                  goaly: WEDDING_HALL_POSITION[1].toString(),
-                  goalName: LOCATION,
-                })
-                window.open(`tmap://route?${params.toString()}`, "_self")
+                window.open(`tmap://route?goalname=식장&goalx=36.347359&goaly=127.291194`, "_self")
                 break
               }
               default: {
