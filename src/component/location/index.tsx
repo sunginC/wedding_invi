@@ -72,7 +72,7 @@ export const Location = () => {
         <button className="map-btn" onClick={() => {  switch (checkDevice()) {
               case "ios":
               case "android": {
-                window.open(`tmap://route?goalname=식장&goalx=36.347359&goaly=127.291194`, "_self")
+                window.open(`tmap://route?goalname=식장&goalx=127.291194&goaly=36.347359`, "_self")
                 break
               }
               default: {
