@@ -32,9 +32,9 @@ export const Information2 = () => {
       <div className="label">마음 전하기</div>
 
       <div className="content">
-        참석이 어려워 직접 축하해주지 
+        참석이 어려워 
         <br />
-        못하는 분들을 위해
+        직접 축하해주지 못하는 분들을 위해
         <br />
         계좌번호를 기재하였습니다.
         <br />

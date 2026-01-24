@@ -29,13 +29,13 @@ export const WEDDING_HALL_POSITION = [36.347359, 127.291194]
 
 // 네이버 지도의 웨딩홀 장소 ID
 // 네이버 지도 웹페이지에서 웨딩홀 검색 후 URL에서 확인 가능.
-// 예: https://map.naver.com/p/entry/place/13321741 -> 13321741
-export const NMAP_PLACE_ID = 13321741
+// 예: https://map.naver.com/p/entry/place/1859886865
+export const NMAP_PLACE_ID = "1859886865"
 
 // 카카오 지도의 웨딩홀 장소 ID
 // 카카오 지도 웹페이지에서 웨딩홀 검색 후 해당 장소에서 상세보기 클릭 시 URL에서 확인 가능.
 // 예: https://place.map.kakao.com/8634826 -> 8634826
-export const KMAP_PLACE_ID = 8634826
+export const KMAP_PLACE_ID = "2109738718"
 
 export const BRIDE_FULLNAME = "최아리"
 export const BRIDE_FIRSTNAME = "아리"

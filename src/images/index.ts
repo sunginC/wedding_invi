@@ -1,5 +1,6 @@
 import coverImage from "./main_cover_2.webp"
 import placeHolderImage from "./main_cover_1.webp"
+import map from "./location.png"
 import image1 from "./CBY-5800.webp"
 import image2 from "./CBY-5817.webp"
 import image3 from "./CBY-5840.webp"
@@ -21,6 +22,7 @@ import image18 from "./CBY-5801.webp"
 
 export const COVER_IMAGE = coverImage
 export const PLACEHOLDER_IMAGE = placeHolderImage
+export const MAP = map
 
 export const GALLERY_IMAGES = [
   image1,

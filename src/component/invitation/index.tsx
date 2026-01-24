@@ -1,9 +1,11 @@
 import { Fragment } from "react/jsx-runtime"
 import {
+  BRIDE_FIRSTNAME,
   BRIDE_FULLNAME,
   BRIDE_INFO,
   BRIDE_FATHER,
   BRIDE_MOTHER,
+  GROOM_FIRSTNAME,
   GROOM_FULLNAME,
   GROOM_INFO,
   GROOM_FATHER,
@@ -21,10 +23,8 @@ export const Invitation = () => {
   const { openModal, closeModal } = useModal()
   return (
     <LazyDiv className="card invitation">
-      <h2 className="english">Invitation</h2>
-
+      <h2 className="english">Invitation </h2>
       <div className="break" />
-
       <div className="content">장담하건대,</div>
       <div className="content">세상이 다 겨울이어도</div>
       <div className="content">우리 사랑은 늘 봄처럼 따뜻하고</div>
@@ -43,14 +43,14 @@ export const Invitation = () => {
         <span className="relation">
           의 <span className="relation-name">{GROOM_TITLE}</span>
         </span>{" "}
-        {GROOM_FULLNAME}
+        {GROOM_FIRSTNAME}
       </div>
       <div className="name">
         {BRIDE_FATHER} · {BRIDE_MOTHER}
         <span className="relation">
           의 <span className="relation-name">{BRIDE_TITLE}</span>
         </span>{" "}
-        {BRIDE_FULLNAME}
+        {BRIDE_FIRSTNAME}
       </div>
 
       <div className="break" />

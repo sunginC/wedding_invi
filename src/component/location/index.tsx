@@ -1,19 +1,94 @@
-import { Map } from "./map"
 import CarIcon from "../../icons/car-icon.svg?react"
 import BusIcon from "../../icons/bus-icon.svg?react"
+import nmapIcon from "../../icons/nmap-icon.png"
+import knaviIcon from "../../icons/knavi-icon.png"
+import tmapIcon from "../../icons/tmap-icon.png"
 import { LazyDiv } from "../lazyDiv"
-import { LOCATION, LOCATION_ADDRESS } from "../../const"
+import { MAP } from "../../images"
+import { LOCATION, LOCATION_ADDRESS, NMAP_PLACE_ID, KMAP_PLACE_ID,WEDDING_HALL_POSITION} from "../../const"
+
+ const checkDevice = () => {
+    const userAgent = window.navigator.userAgent
+    if (userAgent.match(/(iPhone|iPod|iPad)/)) {
+      return "ios"
+    } else if (userAgent.match(/(Android)/)) {
+      return "android"
+    } else {
+      return "other"
+    }
+  }
 
 export const Location = () => {
   return (
     <>
       <LazyDiv className="card location">
         <h2 className="english">Location</h2>
+         <img src={MAP}  alt="map"/>
         <div className="addr">
           {LOCATION}
           <div className="detail">{LOCATION_ADDRESS}</div>
         </div>
-        <Map />
+        <div className="map-bg">
+
+        <button className="map-btn" onClick={() => {  switch (checkDevice()) {
+              case "ios":
+              case "android":
+                window.open(`nmap://place?id=${NMAP_PLACE_ID}`, "_self")
+                break
+              default:
+                window.open(
+                  `https://map.naver.com/p/entry/place/${NMAP_PLACE_ID}`,
+                  "_blank",
+                )
+                break
+            }
+          }}
+        >
+          <img src={nmapIcon} alt="naver-map-icon" />
+          <span>네이버 지도</span>
+        </button>
+
+        <button className="map-btn" onClick={() => {  switch (checkDevice()) {
+              case "ios":
+              case "android":
+                window.open(`nmap://place?id=${NMAP_PLACE_ID}`, "_self")
+                break
+              default:
+                window.open(
+                 `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,
+                  "_blank",
+                )
+                break
+            }
+          }}
+        >
+          <img src={knaviIcon} alt="kakao-navi-icon" />
+          <span>카카오 내비</span>
+        </button>
+
+        <button className="map-btn" onClick={() => {  switch (checkDevice()) {
+              case "ios":
+              case "android": {
+                const params = new URLSearchParams({
+                  goalx: WEDDING_HALL_POSITION[0].toString(),
+                  goaly: WEDDING_HALL_POSITION[1].toString(),
+                  goalName: LOCATION,
+                })
+                window.open(`tmap://route?${params.toString()}`, "_self")
+                break
+              }
+              default: {
+                alert("모바일에서 확인하실 수 있습니다.")
+                break
+            }
+          }
+        }}
+        >
+          <img src={tmapIcon} alt="t-map-icon" />
+          <span>티맵</span>
+        </button>
+       </div>
+        
       </LazyDiv>
       <LazyDiv className="card location">
         <div className="location-info">

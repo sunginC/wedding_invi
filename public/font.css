@@ -12,3 +12,9 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Daraehand";
+  src: url("./daraehand.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
