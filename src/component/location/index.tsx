@@ -3,10 +3,12 @@ import BusIcon from "../../icons/bus-icon.svg?react"
 import nmapIcon from "../../icons/nmap-icon.png"
 import knaviIcon from "../../icons/knavi-icon.png"
 import tmapIcon from "../../icons/tmap-icon.png"
+import { useKakao, useNaver } from "../store"
 import { LazyDiv } from "../lazyDiv"
 import { MAP } from "../../images"
 import { LOCATION, LOCATION_ADDRESS, NMAP_PLACE_ID, KMAP_PLACE_ID,WEDDING_HALL_POSITION} from "../../const"
 
+ const kakao = useKakao()
  const checkDevice = () => {
     const userAgent = window.navigator.userAgent
     if (userAgent.match(/(iPhone|iPod|iPad)/)) {
@@ -51,7 +53,12 @@ export const Location = () => {
         <button className="map-btn" onClick={() => {  switch (checkDevice()) {
               case "ios":
               case "android":
-                window.open(`nmap://place?id=${NMAP_PLACE_ID}`, "_self")
+                 kakao.Navi.start({
+                    name: LOCATION,
+                    x: WEDDING_HALL_POSITION[0],
+                    y: WEDDING_HALL_POSITION[1],
+                    coordType: "wgs84",
+                  })
                 break
               default:
                 window.open(
