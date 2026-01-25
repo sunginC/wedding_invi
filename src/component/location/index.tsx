@@ -71,9 +71,9 @@ export const Location = () => {
             style={{
               flex: 1,
               padding: "8px 0",
-              border: "1px solid #ddd",
-              background: mapType === "image" ? "#333" : "#fff",
-              color: mapType === "image" ? "#fff" : "#000",
+              border: "1px solid #BDE8F5",
+              background: mapType === "image" ? "#BDE8F5" : "#fff",
+              color: mapType === "image" ? "#ff0000" : "#000",
               borderRadius: 6,
               cursor: "pointer",
             }}
@@ -85,9 +85,9 @@ export const Location = () => {
             style={{
               flex: 1,
               padding: "8px 0",
-              border: "1px solid #ddd",
-              background: mapType === "kakao" ? "#333" : "#fff",
-              color: mapType === "kakao" ? "#fff" : "#000",
+              border: "1px solid #BDE8F5",
+              background: mapType === "kakao" ? "#BDE8F5" : "#fff",
+              color: mapType === "kakao" ? "#ff0000" : "#000",
               borderRadius: 6,
               cursor: "pointer",
             }}
@@ -148,6 +148,21 @@ export const Location = () => {
           <div className="detail">{LOCATION_ADDRESS}</div>
         </div>
 
+        <div className="location-info">
+          <div className="transportation-icon-wrapper">
+            <CarIcon className="transportation-icon" />
+          </div>
+          <div className="heading">자가용</div>
+          <div />
+          <div className="content">
+            네이버 지도, 카카오 내비, 티맵 등 이용
+            <br />
+            <b>시크릿가든웨딩</b> 검색
+            <br />
+            - 전용 주차장을 이용하시면 편리합니다.
+          </div>
+        </div>
+
         {/* 버튼 영역 */}
         <div className="map-bg" style={{ display: "flex", gap: 8, marginTop: 16 }}>
           <button
@@ -178,24 +193,6 @@ export const Location = () => {
             <img src={tmapIcon} alt="t-map-icon" />
             <span>티맵</span>
           </button>
-        </div>
-      </LazyDiv>
-
-      {/* 자가용 안내 카드 */}
-      <LazyDiv className="card location">
-        <div className="location-info">
-          <div className="transportation-icon-wrapper">
-            <CarIcon className="transportation-icon" />
-          </div>
-          <div className="heading">자가용</div>
-          <div />
-          <div className="content">
-            네이버 지도, 카카오 내비, 티맵 등 이용
-            <br />
-            <b>시크릿가든웨딩</b> 검색
-            <br />
-            - 전용 주차장을 이용하시면 편리합니다.
-          </div>
         </div>
       </LazyDiv>
     </>
