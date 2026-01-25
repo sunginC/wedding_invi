@@ -4,13 +4,14 @@ import { LazyDiv } from "../lazyDiv"
 import { Button } from "../button"
 import { useModal } from "../modal"
 import { GALLERY_IMAGES } from "../../images"
+import btnIcon1 from "../../icons/btn-icon1.png"
+import btnIcon2 from "../../icons/btn-icon2.png"
 
 const CAROUSEL_ITEMS = GALLERY_IMAGES.map((item, idx) => (
   <div className="carousel-item" key={idx}>
     <img src={item} draggable={false} alt={`${idx}`} />
   </div>
 ))
-
 const DRAG_SENSITIVITY = 15
 
 type Status =
@@ -360,7 +361,11 @@ export const Gallery = () => {
       </div>
       <div className="break" />
 
-      <Button
+      <Button className="reset-btn"
+        style={{  
+          background: "none",
+          border: "none"
+        }}
         onClick={() =>
           openModal({
             className: "all-photo-modal",
@@ -401,7 +406,8 @@ export const Gallery = () => {
           })
         }
       >
-        ★
+        <img src={btnIcon2} alt="btn-icon"  style={{ width: "70px", height: "70px", }}/>
+        
       </Button>
     </LazyDiv>
   )

@@ -6,6 +6,7 @@ import {
   useState,
 } from "react"
 import { type ModalInfo, ModalContext } from "./context"
+import { createPortal } from "react-dom"
 
 type ModalInfoWithKey = ModalInfo & { key: number }
 
@@ -91,36 +92,49 @@ export const ModalProvider = ({ children }: PropsWithChildren) => {
   }, [modalInfoList])
 
   return (
-    <ModalContext.Provider value={{ modalInfoList, openModal, closeModal }}>
-      {children}
-      <div className="modals-wrappeer" ref={modalWrapperRef}>
-        {modalInfoList.map((modalInfo, idx) => (
-          <div
-            key={modalInfo.key}
-            className="modal-background"
-            style={{ zIndex: 4 + idx }}
-            onClick={() => {
-              if (modalInfo.closeOnClickBackground) closeModal()
-            }}
-          >
-            <div
-              className={`modal${modalInfo.className ? ` ${modalInfo.className}` : ""}`}
-              onClick={(e) => {
-                e.stopPropagation()
-              }}
-            >
-              <div className="header">
-                <div className="close-button-wrapper">
-                  <button className="close-button" onClick={closeModal} />
+  <ModalContext.Provider value={{ modalInfoList, openModal, closeModal }}>
+        {children}
+
+        {modalInfoList.length > 0 &&
+          createPortal(
+            <div className="modals-wrappeer" ref={modalWrapperRef}>
+              {modalInfoList.map((modalInfo, idx) => (
+                <div
+                  key={modalInfo.key}
+                  className="modal-background"
+                  style={{ zIndex: 10000 + idx }}
+                  onClick={() => {
+                    if (modalInfo.closeOnClickBackground) closeModal()
+                  }}
+                >
+                  <div
+                    className={`modal${
+                      modalInfo.className ? ` ${modalInfo.className}` : ""
+                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                    }}
+                  >
+                    <div className="header">
+                      <div className="close-button-wrapper">
+                        <button
+                          className="close-button"
+                          onClick={closeModal}
+                        />
+                      </div>
+
+                      {modalInfo.header}
+                    </div>
+
+                    <div className="content">{modalInfo.content}</div>
+
+                    <div className="footer">{modalInfo.footer}</div>
+                  </div>
                 </div>
-                {modalInfo.header}
-              </div>
-              <div className="content">{modalInfo.content}</div>
-              <div className="footer">{modalInfo.footer}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </ModalContext.Provider>
-  )
+              ))}
+            </div>,
+            document.body
+          )}
+      </ModalContext.Provider>
+    )
 }

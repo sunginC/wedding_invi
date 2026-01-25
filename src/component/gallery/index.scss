@@ -123,6 +123,8 @@ $transition-duration: 0.3s;
 }
 
 .all-photo-modal {
+  position: fixed;
+  z-index: 10;
   width: 22rem;
   .header {
     .title {
