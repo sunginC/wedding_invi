@@ -114,9 +114,7 @@ export const Information = () => {
 
   return (
     <LazyDiv className="card information">
-      {/* 식사안내 주석처리
       <Information1 />
-      */}
       <Information2 />
     </LazyDiv>
   )
