@@ -5,12 +5,12 @@ import image1 from "./CBY-5800.jpg"
 import image2 from "./CBY-5817.jpg"
 import image3 from "./CBY-5840.webp"
 import image4 from "./CBY-5870.jpg"
-import image5 from "./CBY-6013.webp"
+import image5 from "./CBY-6013.jpg"
 import image6 from "./CBY-6026.webp"
 import image7 from "./CBY-6081.webp"
 import image8 from "./CBY-6124.webp"
 import image9 from "./CBY-6186.webp"
-import image10 from "./CBY-6268.webp"
+import image10 from "./CBY-6268.jpg"
 import image11 from "./CBY-6294.webp"
 import image12 from "./CBY-6330.webp"
 import image13 from "./CBY-6387.webp"
@@ -28,8 +28,8 @@ export const GALLERY_IMAGES = [
   image1,
   image18,
   image2,
-  image3,
   image4,
+  image3,
   image5,
   image6,
   image7,
