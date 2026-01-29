@@ -8,6 +8,8 @@ import { createHtmlPlugin } from "vite-plugin-html"
 import {
   GROOM_FULLNAME,
   BRIDE_FULLNAME,
+  GROOM_FIRSTNAME,
+  BRIDE_FIRSTNAME,
   WEDDING_DATE,
   LOCATION,
   WEDDING_DATE_FORMAT,
@@ -34,6 +36,8 @@ export default defineConfig({
         data: {
           GROOM_FULLNAME,
           BRIDE_FULLNAME,
+          GROOM_FIRSTNAME,
+          BRIDE_FIRSTNAME,
           DESCRIPTION: `${WEDDING_DATE.format(WEDDING_DATE_FORMAT)} ${LOCATION}`,
         },
       },
