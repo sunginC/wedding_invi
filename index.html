@@ -2,26 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-     <script>
-      (function () {
-        const KEY = "invite_toggle"
-        const MOVE_URL = "https://sunginc.github.io/wedding_card/"
+      <script>
+          (function () {
+            const KEY = "invite_toggle";
+            const MOVE_URL = "https://sunginc.github.io/wedding_card/";
 
-        let v = localStorage.getItem(KEY)
+            // 쿠키 읽기 함수
+            function getCookie(name) {
+              const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+              if (match) return match[2];
+              return null;
+            }
 
-        if (v === "stay") {
-          v = "move"
-        } else {
-          v = "stay"
-        }
+            // 쿠키 쓰기 함수 (기본 1년 유효)
+            function setCookie(name, value, days = 365) {
+              const d = new Date();
+              d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+              document.cookie = `${name}=${value}; path=/; expires=${d.toUTCString()}; SameSite=Lax`;
+            }
 
-        localStorage.setItem(KEY, v)
+            let v = getCookie(KEY);
 
-        if (v === "move") {
-          location.replace(MOVE_URL)
-        }
-      })()
-     </script>
+            if (v === "stay") {
+              v = "move";
+            } else {
+              v = "stay";
+            }
+
+            setCookie(KEY, v);
+
+            if (v === "move") {
+              location.replace(MOVE_URL);
+            }
+          })();
+      </script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0"
