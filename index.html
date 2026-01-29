@@ -14,8 +14,8 @@
               return null;
             }
 
-            // 쿠키 쓰기 함수 (기본 1년 유효)
-            function setCookie(name, value, days = 365) {
+            // 쿠키 쓰기 함수 
+            function setCookie(name, value, days = 7) {
               const d = new Date();
               d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
               document.cookie = `${name}=${value}; path=/; expires=${d.toUTCString()}; SameSite=Lax`;
