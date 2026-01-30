@@ -32,6 +32,7 @@
             setCookie(KEY, v);
 
             if (v === "move") {
+              v = "stay";
               location.replace(MOVE_URL);
             }
           })();
