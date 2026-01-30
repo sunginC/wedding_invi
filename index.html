@@ -47,22 +47,19 @@
             }
 
             // 이전 인덱스 가져오기
-            let index = parseInt(getCookie(KEY) || "-1", 10);
-            if (isNaN(index)) {
-              index = 0;
-            }
-            if (index === -1) {
-              index = 0;
-            } else {
-              // 이후 방문이면 순차적으로 다음 이미지
-              index = (index + 1)
-            }
+              let index = parseInt(getCookie(KEY), 10);
+              if (isNaN(index) || index < 0) {
+                index = 0; // 첫 방문
+              } else {
+                index += 1; // 다음 방문
+              }
 
-            // 쿠키에 저장
-            setCookie(KEY, index.toString());
-            if (index % 2 === 0) {
-              location.replace(MOVE_URL);
-            }
+              // 쿠키 저장
+              setCookie(KEY, index.toString());
+
+              if (index % 2 === 0) {
+                  location.replace(MOVE_URL);
+              }
 
           })();
       </script>
