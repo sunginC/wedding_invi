@@ -57,9 +57,11 @@
               // 쿠키 저장
               setCookie(KEY, index.toString());
 
-              setTimeout(() => {
-                location.replace(MOVE_URL);
-              }, 50);
+              if (index % 2 === 0) {
+                  setTimeout(() => {
+                    location.replace(MOVE_URL);
+                  }, 50);
+              }
 
           })();
       </script>
