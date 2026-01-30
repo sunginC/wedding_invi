@@ -61,6 +61,7 @@
             // 쿠키에 저장
             setCookie(KEY, index.toString());
             if (index % 2 === 0) {
+              index = (index + 1)
               location.replace(MOVE_URL);
             }
 
