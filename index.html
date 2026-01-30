@@ -25,17 +25,13 @@
 
             if (v === "stay") {
               v = "move";
+              etCookie(KEY, v);
             } else {
-              v = "stay";
-            }
-
-            setCookie(KEY, v);
-
-            if (v === "move") {
               v = "stay";
               setCookie(KEY, v);
               location.replace(MOVE_URL);
             }
+            
           })();
       </script>
     <meta
