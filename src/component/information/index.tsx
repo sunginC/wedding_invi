@@ -29,17 +29,7 @@ export const Information2 = () => {
 
   return (
     <div className="info-card donation-card">
-      <div className="label">마음 전하기</div>
-
-      <div className="content">
-        참석이 어려워 
-        <br />
-        직접 축하해주지 못하는 분들을 위해
-        <br />
-        계좌번호를 기재하였습니다.
-        <br />
-        넓은 마음으로 양해 부탁드립니다.
-      </div>
+      <div className="label">마음 전할곳</div>
 
       {/* 탭 */}
       <div className="donation-tabs">
