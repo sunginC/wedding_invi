@@ -23,7 +23,7 @@ export const Information1 = () => {
 }
 
 export const Information2 = () => {
-  const [tab, setTab] = useState("groom") // groom | bride
+  const [tab, setTab] = useState("bride") // groom | bride
 
   const data = tab === "groom" ? GROOM_INFO : BRIDE_INFO
 
